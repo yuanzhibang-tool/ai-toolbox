@@ -11,7 +11,7 @@ dynamic = [ "description",]
 dependencies = [ "click >=8.1.7", "huggingface_hub >=0.16.4",]
 
 [project.readme]
-file = "README.md"
+file = "../README.md"
 content-type = "text/markdown"
 
 [project.urls]
@@ -24,3 +24,6 @@ file = "LICENSE"
 [project.scripts]
 ait-download = "py_ait.hf_download:run"
 ait-fork = "py_ait.hf_fork:run"
+
+[tool.flit.sdist]
+include = ["../README.md"]
