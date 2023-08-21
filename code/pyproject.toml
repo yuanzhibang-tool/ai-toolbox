@@ -10,9 +10,14 @@ classifiers = [ "License :: OSI Approved :: MIT License",]
 dynamic = [ "description",]
 dependencies = [ "click >=8.1.7", "huggingface_hub >=0.16.4",]
 readme = "../README.md"
-homepage = "https://github.com/yuanzhibang-tool/ai-toolbox"
-repository = "https://github.com/yuanzhibang-tool/ai-toolbox"
-documentation = "https://github.com/yuanzhibang-tool/ai-toolbox"
+
+[project.urls]
+Documentation  = "https://github.com/yuanzhibang-tool/ai-toolbox"
+Source  = "https://github.com/yuanzhibang-tool/ai-toolbox"
+
+[tool.flit.metadata]
+Documentation  = "https://github.com/yuanzhibang-tool/ai-toolbox"
+Source  = "https://github.com/yuanzhibang-tool/ai-toolbox"
 
 [project.license]
 file = "LICENSE"
