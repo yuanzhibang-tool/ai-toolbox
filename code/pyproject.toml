@@ -26,4 +26,4 @@ ait-download = "py_ait.hf_download:run"
 ait-fork = "py_ait.hf_fork:run"
 
 [tool.flit.sdist]
-include = [ "../README.md",]
+include = [ "README.md",]
