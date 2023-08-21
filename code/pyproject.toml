@@ -4,7 +4,7 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "py_ait"
-version = "0.0.35"
+version = "0.0.36"
 authors = []
 classifiers = [ "License :: OSI Approved :: MIT License",]
 dynamic = [ "description",]
@@ -12,7 +12,6 @@ dependencies = [ "click >=8.1.7", "huggingface_hub >=0.16.4",]
 
 [project.readme]
 file = "README.md"
-
 
 [project.urls]
 Documentation = "https://github.com/yuanzhibang-tool/ai-toolbox"
