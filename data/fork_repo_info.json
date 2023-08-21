@@ -1,0 +1,14 @@
+{
+    "model":[
+        {
+            "source":"OpenAssistant/falcon-40b-megacode2-oasst",
+            "target":"your_name/your_repo"
+        }        
+    ],
+    "dataset":[
+        {
+            "source":"PygmalionAI/PIPPA",
+            "target":"your_name/your_repo"
+        }
+    ]
+}

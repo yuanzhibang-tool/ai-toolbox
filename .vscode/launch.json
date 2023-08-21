@@ -1,0 +1,27 @@
+{
+  // 使用 IntelliSense 了解相关属性。
+  // 悬停以查看现有属性的描述。
+  // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: Current File",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal",
+      "args": [
+        // "--repo_info_path=/home/developer/Code/data/repo_info.json",
+        "--repo_info_path=/home/developer/Code/data/fork_repo_info.json",
+        "--retry_count=20",
+        "--hf_username=your_hf_username",
+        "--hf_token=your_hf_token",
+        "--source_repo=PygmalionAI/PIPPA",
+        // "--target_repo=your_hf_username/your_repo_name",
+        "--repo_type=dataset",
+        "--separator=__",
+        // "--disable-multi-task"
+      ]
+    }
+  ]
+}

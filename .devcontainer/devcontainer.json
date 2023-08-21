@@ -1,0 +1,9 @@
+{
+    "name": "Python-DEV",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "python-dev",
+    "runServices": [
+        "python-dev"
+    ],
+    "workspaceFolder": "/home/developer/Code"
+}

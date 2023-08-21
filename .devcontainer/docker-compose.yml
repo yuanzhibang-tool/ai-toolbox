@@ -1,0 +1,8 @@
+version: '3.2'
+services:
+  python-dev:
+    build:
+      context: ..
+      dockerfile: .devcontainer/Dockerfile
+    volumes:
+      - ..:/home/developer/Code

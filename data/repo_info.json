@@ -1,0 +1,10 @@
+{
+    "model":[
+        "OpenAssistant/falcon-40b-megacode2-oasst",
+        "stabilityai/stable-diffusion-xl-base-1.0"
+    ],
+    "dataset":[
+        "OpenAssistant/oasst1",
+        "PygmalionAI/PIPPA"
+    ]
+}
