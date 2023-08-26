@@ -11,8 +11,17 @@
 ```bash
 ait-download \
 --repo_info_path=/your_repo_info.json \
---retry_count=2
+--retry_count=2 \
+--thread_nums=5
 ```
+
+#### Args description
+
+|name|description|required|default|
+|---|---|---|---|
+|`--repo_info_path`|repo info file for download multi repos at once, demo below!|`True`|`None`|
+|`--retry_count`|retry count after a failure|`False`|`10`|
+|`--thread_nums`|the number of threads concurrently executing the target|`False`|`5`|
 
 #### Demo repo_info.json
 
@@ -29,6 +38,8 @@ ait-download \
 }
 ```
 
+
+
 ---
 
 ### ait-fork
@@ -42,7 +53,8 @@ ait-fork \
 --retry_count=2 \
 --hf_username=your_hf_username \
 --hf_token=your_hf_token \
---separator=__
+--separator=__ \
+--thread_nums=5
 
 # fork without fork_repo_info.json
 ait-fork \
@@ -71,7 +83,7 @@ ait-fork \
 |`--target_repo`|the target repo you want to fork to! eg: `your_hf_username/your_repo_name`, if not pass, use `your_hf_username/source_repo.replace_/_with_separator`|`False`|`None`|
 |`--repo_type`|`model` or `dataset`|`False`|`dataset`|
 |`--disable-multi-task`|disable multi task for forking multi repos when you pass, only work with `--repo_info_path`|`False`|`False`|
-
+|`--thread_nums`|the number of threads concurrently executing the target|`False`|`5`|
 #### Demo fork_repo_info.json
 
 ```json
