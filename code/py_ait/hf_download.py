@@ -1,6 +1,7 @@
 import click
 import json
 from huggingface_hub import snapshot_download
+from datasets import load_dataset,DownloadConfig
 import threading
 
 @click.command()
@@ -27,7 +28,12 @@ def run(repo_info_path,retry_count=10,thread_nums=5):
         with pool_sema:
             for i in range(int(retry_count)):
                 try:
-                    snapshot_download(repo_id=repo_id, repo_type=repo_type,resume_download=True)
+                    # dataset downloaded via snapshot_download cannot be load automatically via load_dataset, wo we use load_dataset to download dataset
+                    if repo_type == "dataset":
+                        download_config = DownloadConfig(max_retries=100)
+                        load_dataset(repo_id,download_config=download_config)
+                    else:
+                        snapshot_download(repo_id=repo_id, repo_type=repo_type,resume_download=True)
                     break
                 except Exception as e:
                     print(f'An error occurred: {e}')
