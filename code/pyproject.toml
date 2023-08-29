@@ -4,11 +4,11 @@ build-backend = "flit_core.buildapi"
 
 [project]
 name = "py_ait"
-version = "0.0.42"
+version = "0.0.43"
 authors = []
 classifiers = [ "License :: OSI Approved :: MIT License",]
 dynamic = [ "description",]
-dependencies = [ "click >=8.1.7", "huggingface_hub >=0.16.4",]
+dependencies = [ "click >=8.1.7", "huggingface_hub >=0.16.4", "datasets >=2.14.0",]
 
 [project.readme]
 file = "README.md"
